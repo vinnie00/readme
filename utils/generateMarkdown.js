@@ -1,8 +1,9 @@
-
-# readme generator
+function generateMarkdown(data) {
+  return `
+# ${data.title}
 ## description 
   
-  creating a readme genarator
+  ${data.description}
 
 ## Table of contents
 
@@ -13,18 +14,22 @@
   * [Tests](#tests)
 
 ## installation
-undefined
+${data.installation}
 
 ## usage
-test
+${data.usage}
 
 ## license
-test2
+${data.license}
 
 ## contributing
-test 3
+${data.contributing}
 
 ## tests
-test4
+${data.tests}
 
 
+`;
+}
+
+module.exports = generateMarkdown;
